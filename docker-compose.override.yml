@@ -13,6 +13,18 @@ services:
     volumes:
       - postgres_data_auth_database:/var/lib/postgresql/data/
 
+  messengerdatabase:
+    container_name: messengerdatabase
+    environment:
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin1234
+      - POSTGRES_DB=AuthDatabase
+    restart: always
+    ports:
+      - "5101:5432"
+    volumes:
+      - postgres_data_messenger_database:/var/lib/postgresql/data/
+
   cache:
     container_name: cache
     restart: always

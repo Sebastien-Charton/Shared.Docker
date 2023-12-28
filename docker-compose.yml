@@ -3,7 +3,10 @@ version: '3.4'
 services:
   authdatabase:
     image: postgres
-  
+
+  messengerdatabase:
+    image: postgres
+
   cache:
     image: redis:alpine
 
@@ -18,5 +21,6 @@ services:
 
 volumes:
   postgres_data_auth_database:
+  postgres_data_messenger_database:
   elasticsearch-data:
   portainer_data:

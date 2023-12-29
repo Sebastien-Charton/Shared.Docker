@@ -31,6 +31,13 @@ services:
     ports:
       - "6390:6379"
 
+  redisinsight:
+    container_name: redisinsight
+    ports:
+      - '6391:8001'
+    volumes:
+      - redis_insight_data:/db 
+
   elasticsearch:
     container_name: elasticsearch
     environment:
@@ -42,7 +49,7 @@ services:
     ports:
       - "9210:9200"
     volumes:
-      - elasticsearch-data:/usr/share/elasticsearch/data
+      - elasticsearch_data:/usr/share/elasticsearch/data
 
   kibana:
     container_name: kibana

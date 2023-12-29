@@ -10,6 +10,9 @@ services:
   cache:
     image: redis:alpine
 
+  redisinsight:
+    image: redislabs/redisinsight:latest
+
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.9.2
 
@@ -22,5 +25,6 @@ services:
 volumes:
   postgres_data_auth_database:
   postgres_data_messenger_database:
-  elasticsearch-data:
+  elasticsearch_data:
   portainer_data:
+  redis_insight_data:

@@ -25,14 +25,15 @@ services:
     volumes:
       - postgres_data_messenger_database:/var/lib/postgresql/data/
 
-  cache:
-    container_name: cache
+  redis:
+    container_name: redis
     restart: always
     ports:
       - "6390:6379"
 
   redisinsight:
     container_name: redisinsight
+    restart: always
     ports:
       - '6391:8001'
     volumes:

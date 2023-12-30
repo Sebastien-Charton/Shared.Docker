@@ -7,7 +7,7 @@ services:
   messengerdatabase:
     image: postgres
 
-  cache:
+  redis:
     image: redis:alpine
 
   redisinsight:

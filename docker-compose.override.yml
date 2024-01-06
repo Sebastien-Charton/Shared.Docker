@@ -64,7 +64,7 @@ services:
 
   portainer:
     container_name: portainer
-    restart: "no"
+    restart: always
     ports:
       - "9010:9000"
     volumes:

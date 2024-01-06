@@ -2,10 +2,10 @@ version: '3.4'
 
 services:
   authdatabase:
-    image: postgres
+    image: postgres:latest
 
   messengerdatabase:
-    image: postgres
+    image: postgres:latest
 
   redis:
     image: redis:alpine
@@ -20,7 +20,7 @@ services:
     image: docker.elastic.co/kibana/kibana:7.9.2
 
   portainer:
-    image: portainer/portainer-ce
+    image: portainer/portainer-ce:latest
 
 volumes:
   postgres_data_auth_database:
